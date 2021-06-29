@@ -1,3 +1,6 @@
+![CCLOGO](https://raw.githubusercontent.com/CloutContracts/cloutcontracts.github.io/main/assets/images/c-128x128.png)
+# CloutContracts Wallet
+---
 # Иeureal Wallet
 A simple Ethereum Wallet based on Иeureal ERC20 Token. Send a Receive ETH and Иeureal with ease and security. Ethereum wallets are decrypted and raw transactions are signed locally. Raw Transactions are sent directly to EtherScan.io. This application is not an official release from Иeureal, just a opensource wallet for Иeureal Token holders. Wallet Private Keys are kept on your local machine, everytime you want to use this wallet you must re-use the Keystore JSON or Private Key for your wallet.
 This wallet is locked to the Иeureal Token contract address: `0x91923993C4Dc3e089BBb1fc9d4A5A765A479B68f`
