@@ -19,7 +19,7 @@ var etherUSD = 0;
 var provider = new providers.EtherscanProvider(false);
 
 var tokenContract;
-var TOKEN_ADDRESS = '0x91923993C4Dc3e089BBb1fc9d4A5A765A479B68f'
+var TOKEN_ADDRESS = '0x1da4858ad385cc377165A298CC2CE3fce0C5fD31'
 const TOKEN_ABI = [{"constant":false,"inputs":[],"name":"freezeTransfers","outputs":[],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"frozen","outputs":[{"name":"","type":"bool"}],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"name","outputs":[{"name":"","type":"string"}],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"totalSupply","outputs":[{"name":"","type":"uint256"}],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"decimals","outputs":[{"name":"","type":"uint256"}],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"MAXIMUM_SUPPLY","outputs":[{"name":"","type":"uint256"}],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"standard","outputs":[{"name":"","type":"string"}],"payable":false,"type":"function"},{"constant":true,"inputs":[{"name":"","type":"address"}],"name":"balanceOf","outputs":[{"name":"","type":"uint256"}],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"owner","outputs":[{"name":"","type":"address"}],"payable":false,"type":"function"},{"constant":true,"inputs":[],"name":"symbol","outputs":[{"name":"","type":"string"}],"payable":false,"type":"function"},{"constant":false,"inputs":[{"name":"_to","type":"address"},{"name":"_value","type":"uint256"}],"name":"transfer","outputs":[],"payable":false,"type":"function"},{"inputs":[],"payable":false,"type":"constructor"},{"payable":false,"type":"fallback"},{"anonymous":false,"inputs":[{"indexed":true,"name":"from","type":"address"},{"indexed":true,"name":"to","type":"address"},{"indexed":false,"name":"value","type":"uint256"}],"name":"Transfer","type":"event"}];
 
 tokenContract = new ethers.Contract(TOKEN_ADDRESS, TOKEN_ABI, provider);
@@ -30,15 +30,15 @@ function OpenEtherScan(txid) {
 }
 
 function OpenGithubRepo() {
-  shell.openExternal('https://github.com/hunterlong/neureal-wallet')
+  shell.openExternal('https://github.com/CloutContracts/Wallet/')
 }
 
 function OpenGithubReleases() {
-  shell.openExternal('https://github.com/hunterlong/neureal-wallet/releases')
+  shell.openExternal('https://github.com/CloutContracts/Wallet/releases')
 }
 
-function OpenHunterGithub() {
-  shell.openExternal('https://github.com/hunterlong')
+function OpenMentors4EDUGithub() {
+  shell.openExternal('https://github.com/Mentors4EDU')
 }
 
 function OpenMyEtherWallet() {
