@@ -13,7 +13,7 @@ var tokenBalance = 0;
 var ethBalance = 0;
 var version = "0.0.1";
 
-var necpUSD = 0;
+var ccsUSD = 0;
 var etherUSD = 0;
 
 var provider = new providers.EtherscanProvider(false);
@@ -48,7 +48,7 @@ function OpenMyEtherWallet() {
 function StorjPrice() {
   var api = "https://api.coinmarketcap.com/v1/ticker/storj/";
   $.get(api, function(data, status){
-    necpUSD = parseFloat(data[0]['price_usd']);
+    ccsUSD = parseFloat(data[0]['price_usd']);
   });
 }
 
@@ -69,12 +69,12 @@ function UpdatePricing() {
 
 function UpdatePortfolio() {
   setTimeout(function() {
-    var totalStorj = tokenBalance * necpUSD;
+    var totalStorj = tokenBalance * ccsUSD;
     var totalEth = ethBalance * etherUSD;
     var totalPort = totalStorj + totalEth;
-    // $("#portNeurealUSD").html("($"+necpUSD+")");
+    // $("#portCloutContractsUSD").html("($"+ccsUSD+")");
     // $("#portEthUSD").html("($"+etherUSD+")");
-    // $("#portfolioNeureal").html(totalStorj.toFixed(2))
+    // $("#portfolioCloutContracts").html(totalStorj.toFixed(2))
     // $("#portfolioEth").html(totalEth.toFixed(2))
     // $("#portfolioTotal").html(totalPort.toFixed(2))
     // $(".portfolio").fadeIn('fast');
@@ -215,7 +215,7 @@ function updateBalance() {
         var trueBal = result[0].toString(10);
         var messageEl = $('#neurealbal');
         var n = trueBal * 0.00000001;
-        console.log("NECP Balance: " + n);
+        console.log("CCS Balance: " + n);
         var atyxValue = n.toLocaleString(
             undefined, // use a string like 'en-US' to override browser locale
             {
@@ -389,7 +389,7 @@ function SendToken(callback) {
             $(".txidLink").attr("onclick", "OpenEtherScan('"+txid.hash+"')");
             $("#senttxamount").html(amount);
             $("#txtoaddress").html(to);
-            $("#txtype").html("NECP");
+            $("#txtype").html("CCS");
             $('#trxsentModal').modal('show');
             updateBalance();
         });
