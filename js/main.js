@@ -87,7 +87,7 @@ function CheckForUpdates() {
   $.get(versionFile, function(data, status){
       var verCheck = data.replace(/^\s+|\s+$/g, '');
         if (version != verCheck) {
-          alert("There's a new Update for Neureal Wallet! New Version: "+data);
+          alert("There's a new Update for CloutContracts Wallet! New Version: "+data);
           OpenGithubReleases();
         } else {
           alert("You have the most current version");
