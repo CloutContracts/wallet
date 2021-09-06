@@ -1,0 +1,54 @@
+{
+  "name": "ccs-wallet",
+  "version": "1.0.0",
+  "description": "ERC20 Token wallet utilizing SafeMath, DAOs & Web3",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1",
+    "dev": "cross-env NODE_ENV=development webpack-dev-server --progress --hot --host 0.0.0.0",
+    "start": "webpack serve --config webpack.config.js --open",
+    "build": "cross-env NODE_ENV=production webpack --progress --hide-modules"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/CloutContracts/Wallet.git"
+  },
+  "keywords": [
+    "ERC20",
+    "Demo",
+    "Token",
+    "Wallet",
+    "Blockchain",
+    "DAPPs",
+    "Smart",
+    "Applications"
+  ],
+    "dependencies": {
+    "embark": "^2.5.2",
+    "embark-framework": "^1.2.1",
+    "vue": "^2.3.4",
+    "vuetify": "^0.13.0"
+  },
+  "devDependencies": {
+    "babel-core": "^6.25.0",
+    "babel-loader": "^6.4.1",
+    "babel-preset-latest": "^6.24.1",
+    "cross-env": "^3.2.4",
+    "css-loader": "^0.25.0",
+    "file-loader": "^0.9.0",
+    "node-sass": "^4.5.3",
+    "sass-loader": "^5.0.1",
+    "stylus": "^0.54.5",
+    "stylus-loader": "^3.0.1",
+    "vue-loader": "^11.3.4",
+    "vue-template-compiler": "^2.4.2",
+    "webpack": "^2.7.0",
+    "webpack-dev-server": "^3.1.11"
+  },    
+  "author": "CloutContracts",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://https://github.com/CloutContracts/Wallet/issues"
+  },
+  "homepage": "https://github.com/https://github.com/CloutContracts/Wallet#readme"
+}
