@@ -42,6 +42,7 @@ You can compile this electron application on your own.
 - `git clone https://github.com/CloutContracts/Wallet`
 - `cd Wallet`
 - `npm install`
+- `npm install electron@latest`
 - `npm start`
 
 # License
