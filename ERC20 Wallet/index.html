@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+  <title>CCS Wallet</title>
+  <meta charset="utf-8">
+  <meta http-equiv="X-UA-Compatible" content="IE=edge">
+  <meta name="viewport" content="width=device-width, initial-scale=1.0">
+  <link href='https://fonts.googleapis.com/css?family=Orbitron:300,400,500,700|Material+Icons' rel="stylesheet" type="text/css">
+  <link rel="icon" type="image/png" href="public/favicon-32x32.png" sizes="32x32">
+  <script src="http://code.jquery.com/jquery-3.2.1.min.js" integrity="sha256-hwg4gsxgFZhOsEEamdOYGBf13FyQuiTwlAQgxVSNgt4=" crossorigin="anonymous"></script>
+  <script src="./node_modules/web3/dist/web3.min.js"></script>
+  <script>
+      var web3 = new Web3(new Web3.providers.HttpProvider("http://127.0.0.1:8545"));
+      web3.eth.defaultAccount = web3.eth.accounts[0];
+
+      var Contract = web3.eth.contract([{"inputs":[],"payable":false,"stateMutability":"nonpayable","type":"constructor"},{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"owner","type":"address"},{"indexed":true,"internalType":"address","name":"spender","type":"address"},{"indexed":false,"internalType":"uint256","name":"value","type":"uint256"}],"name":"Approval","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"previousOwner","type":"address"},{"indexed":true,"internalType":"address","name":"newOwner","type":"address"}],"name":"OwnershipTransferred","type":"event"},{"anonymous":false,"inputs":[{"indexed":true,"internalType":"address","name":"from","type":"address"},{"indexed":true,"internalType":"address","name":"to","type":"address"},{"indexed":false,"internalType":"uint256","name":"value","type":"uint256"}],"name":"Transfer","type":"event"},{"constant":true,"inputs":[{"internalType":"address","name":"owner","type":"address"},{"internalType":"address","name":"spender","type":"address"}],"name":"allowance","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"internalType":"address","name":"spender","type":"address"},{"internalType":"uint256","name":"amount","type":"uint256"}],"name":"approve","outputs":[{"internalType":"bool","name":"","type":"bool"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[{"internalType":"address","name":"account","type":"address"}],"name":"balanceOf","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"internalType":"address","name":"spender","type":"address"},{"internalType":"uint256","name":"subtractedValue","type":"uint256"}],"name":"decreaseAllowance","outputs":[{"internalType":"bool","name":"","type":"bool"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[{"internalType":"address","name":"spender","type":"address"},{"internalType":"uint256","name":"addedValue","type":"uint256"}],"name":"increaseAllowance","outputs":[{"internalType":"bool","name":"","type":"bool"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[],"name":"isOwner","outputs":[{"internalType":"bool","name":"","type":"bool"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"name","outputs":[{"internalType":"string","name":"","type":"string"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"owner","outputs":[{"internalType":"address","name":"","type":"address"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[],"name":"renounceOwnership","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":true,"inputs":[],"name":"symbol","outputs":[{"internalType":"string","name":"","type":"string"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":true,"inputs":[],"name":"totalSupply","outputs":[{"internalType":"uint256","name":"","type":"uint256"}],"payable":false,"stateMutability":"view","type":"function"},{"constant":false,"inputs":[{"internalType":"address","name":"recipient","type":"address"},{"internalType":"uint256","name":"amount","type":"uint256"}],"name":"transfer","outputs":[{"internalType":"bool","name":"","type":"bool"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[{"internalType":"address","name":"sender","type":"address"},{"internalType":"address","name":"recipient","type":"address"},{"internalType":"uint256","name":"amount","type":"uint256"}],"name":"transferFrom","outputs":[{"internalType":"bool","name":"","type":"bool"}],"payable":false,"stateMutability":"nonpayable","type":"function"},{"constant":false,"inputs":[{"internalType":"address","name":"newOwner","type":"address"}],"name":"transferOwnership","outputs":[],"payable":false,"stateMutability":"nonpayable","type":"function"}]);
+      var CCS = Contract.at('0x1da4858ad385cc377165A298CC2CE3fce0C5fD31');
+      var input = document.getElementById('input');
+      var button = document.getElementById('button');
+      var output = document.getElementById('output');
+
+      button.addEventListener('click', function(){
+          CCS.setCCS(input.value);
+
+          output.inner.HTML = web3.toAscii(CCS.getCCS());
+      });
+
+  </script>
+  <script>
+
+      var Bitstamp = require('./bitstamp/bitstamp.js');
+
+      var publicBitstamp = new Bitstamp();
+
+      // publicBitstamp.transactions('btceur', {time: 'hour'}, console.log);
+      // publicBitstamp.ticker('btceur', console.log);
+      // publicBitstamp.ticker_hour('btceur', console.log);
+      // publicBitstamp.order_book('btcusd', false, console.log);
+      // publicBitstamp.eur_usd(console.log);
+
+      var key = 'your-key';
+      var secret = 'your-secret';
+      var client_id = 'your-bitstamp-user-id';
+      var timeout = 10000;
+      var privateBitstamp = new Bitstamp(key, secret, client_id, timeout);
+
+      //    commented out for your protection
+
+      // privateBitstamp.balance(null, console.log);
+      // privateBitstamp.user_transactions('btceur', {limit: 10, offset: 5, sort: 'asc'}, console.log);
+      // privateBitstamp.open_orders('btcusd', console.log);
+      // privateBitstamp.order_status(id, console.log);
+      // privateBitstamp.cancel_order(id, console.log);
+      // privateBitstamp.cancel_all_orders(console.log)
+      // privateBitstamp.buy('btcusd', amount, price, limit_price, console.log);
+      // privateBitstamp.sell('btcusd', amount, price, limit_price, console.log);
+      // privateBitstamp.withdrawal_requests(console.log);
+      // privateBitstamp.bitcoin_withdrawal(amount, address, console.log);
+      // privateBitstamp.bitcoin_deposit_address(console.log);
+      // privateBitstamp.unconfirmed_btc(console.log);
+      // privateBitstamp.ripple_withdrawal(amount, address, currency);
+      // privateBitstamp.ripple_address(console.log);
+      // privateBitstamp.transfer_to_main(amount, currency, subAccount, console.log);
+      // privateBitstamp.transfer_from_main(amount, currency, subAccount, console.log);
+
+  </script>
+  <!--<script src="ajaxy.js"></script>-->
+</head>
+
+<body>
+  <div id="app"></div>
+  <script src="/dist/build.js"></script>
+
+</body>
+
+</html>
