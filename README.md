@@ -7,20 +7,19 @@ This wallet is locked to the CloutContracts Token contract address: `0x1da4858ad
 
   <img src="http://i.imgur.com/GEzvKW8.png">
 
-## Иeureal Wallet Features
+## CloutContracts Wallet Features
 - Use Keystore JSON wallet
 - Use Private Key wallet
 - Send and Receive Ethereum (ETH)
 - Send a Receive CloutContracts tokens. ([0x1da4858ad385cc377165A298CC2CE3fce0C5fD31](https://etherscan.io/address/0x1da4858ad385cc377165A298CC2CE3fce0C5fD31))
 - Set custom Gas Price for transactions
-- Portfolio value for CloutContracts and Ethereum in USD
 - Copy address to clipboard when clicked
 - Transaction ID with etherscan URL once transaction is submitted
 - Check for Updates button (in About - bottom right)
 - Raw Transactions send to EtherScan
 
 <img align="left" width="520" src="https://raw.githubusercontent.com/CloutContracts/Wallet/master/images/CloutContracts_Wallet.png"><h3>Wallet Security</h3>
-None of your wallet information is sent to any server. This wallet uses [ether-js](https://docs.ethers.io/ethers.js/index.html) javascript library to decrypt wallets locally. Each time you open the wallet, you will need to reinput the Keystore JSON file with password or use the wallet's Private Key. To keep your wallet secure, I highly recommend using the Keystore JSON at all times. To remove confusion, this wallet will not allow you to create a new wallet. If you don't have a Ethereum or Иeureal wallet yet, make one with a secure password at [myetherwallet.com](https://www.myetherwallet.com/). This wallet will not save or move your wallets. Be sure to back up the Keystore JSON file!
+None of your wallet information is sent to any server. This wallet uses [ether-js](https://docs.ethers.io/ethers.js/index.html) javascript library to decrypt wallets locally. Each time you open the wallet, you will need to reinput the Keystore JSON file with password or use the wallet's Private Key. To keep your wallet secure, I highly recommend using the Keystore JSON at all times. To remove confusion, this wallet will not allow you to create a new wallet. If you don't have a Ethereum or CloutContracts wallet yet, make one with a secure password at [myetherwallet.com](https://www.myetherwallet.com/). This wallet will not save or move your wallets. Be sure to back up the Keystore JSON file!
 
 <h3>Transactions</h3>
 This CloutContracts Wallet will allow you to set a custom Gas Price if you need to change the price. By default it is set to *21* gwei. Minimum is 5 gwei. The gas limit on a normal Ether transaction is *12000*. The gas limit on sending CloutContracts Tokens is *65000*.
@@ -31,7 +30,7 @@ This CloutContracts Wallet will allow you to set a custom Gas Price if you need 
 
 
 <h3>Source Code Auditing</h3>
-Feel free to look at what this application is doing. The CloutContracts Wallet was built in electron, jquery, bootstrap, and uses ether.js for decrypting wallets. Below you'll find the main functionality of the application.
+Feel free to look at what this application is doing. The CloutContracts Wallet was built on electron, jquery, bootstrap, and uses ether.js for decrypting wallets. Below you'll find the main functionality of the application.
 
 ### Audit Lines
 - [CloutContracts Contract](https://github.com/CloutContracts/Wallet/blob/master/js/main.js#L22)
