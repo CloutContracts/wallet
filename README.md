@@ -22,7 +22,7 @@ None of your wallet information is sent to any server. This wallet uses [ether-j
 <h3>Transactions</h3>
 This CloutContracts Wallet will allow you to set a custom Gas Price if you need to change the price. By default it is set to *21* gwei. Minimum is 5 gwei. The gas limit on a normal Ether transaction is *12000*. The gas limit on sending CloutContracts Tokens is *65000*.
 
-<img align="right" width="420" src="">
+<img align="right" width="420" src="https://raw.githubusercontent.com/CloutContracts/Wallet/master/images/Ether_Send.png">
 
 <img align="left" width="420" src="https://raw.githubusercontent.com/CloutContracts/Wallet/master/images/CloutContracts_Send.png">
 
