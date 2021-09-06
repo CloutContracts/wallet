@@ -1,4 +1,4 @@
-![CCLOGO](https://raw.githubusercontent.com/CloutContracts/cloutcontracts.github.io/main/assets/images/c-128x128.png)
+![CCLOGO](https://raw.githubusercontent.com/CloutContracts/Wallet/master/Local%20Wallet/images/ccs.png)
 # CloutContracts Wallet
 #### This is beta and built off an older version of Electron (depreciated), please be careful when using.
 A simple Ethereum wallet based on the CloutContracts ERC20 Token. Send and receive ETH and CloutContracts with ease and security. Ethereum wallets are decrypted and raw transactions are signed locally. Raw Transactions are sent directly to EtherScan.io. Wallet Private Keys are kept on your local machine, everytime you want to use this wallet you must re-use the Keystore JSON or Private Key for your wallet.
