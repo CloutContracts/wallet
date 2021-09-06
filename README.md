@@ -5,7 +5,7 @@
 A simple Ethereum wallet based on the CloutContracts ERC20 Token. Send and receive ETH and CloutContracts with ease and security. Ethereum wallets are decrypted and raw transactions are signed locally. Raw Transactions are sent directly to EtherScan.io. Wallet Private Keys are kept on your local machine, everytime you want to use this wallet you must re-use the Keystore JSON or Private Key for your wallet.
 This wallet is locked to the CloutContracts Token contract address: `0x1da4858ad385cc377165A298CC2CE3fce0C5fD31`
 
-  <img src="http://i.imgur.com/GEzvKW8.png">
+  <img src="https://raw.githubusercontent.com/CloutContracts/Wallet/master/images/Preview_image.png">
 
 ## CloutContracts Wallet Features
 - Use Keystore JSON wallet
