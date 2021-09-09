@@ -5,6 +5,8 @@
 
 That said, there are some people who prefer running wallets locally. Some tech savvy users might even implement measures to avoid frontrunning or reduce gas fees all together outside of node transfers.
 
+## Local Wallet (Recommended)
 [Wallet 1]
 
+## Vue.js ERC20 Wallet (Other Option)
 [Wallet 2]
