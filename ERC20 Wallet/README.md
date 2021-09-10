@@ -7,7 +7,8 @@
 ``` bash
 # install dependencies
 npx npm@6 install -f
-npm install 
+npm install
+npm audit fix --force
 
 # serve with hot reload at localhost:8080
 npm run dev
