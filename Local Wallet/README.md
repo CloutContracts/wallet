@@ -39,7 +39,7 @@ Feel free to look at what this application is doing. The CloutContracts Wallet w
 - [Using Private Key](https://github.com/CloutContracts/Wallet/blob/master/js/main.js#L163)
 
 ### Build
-You can compile this electron application on your own.
+You can compile this Electron application on your own.
 - `git clone https://github.com/CloutContracts/Wallet`
 - `cd Wallet`
 - `npm install`
