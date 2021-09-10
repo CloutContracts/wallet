@@ -12,3 +12,5 @@ This is the local wallet which is different then the Vue.js option. Please keep 
 
 ## Vue.js ERC20 Wallet (Other Option)
 This is a Vue.js wallet option, but this one also has some updated dependencies w/ webpack so you want to be careful on which version of node.js and NPM you run. Commands like `npx npm@6 install` and then `npm install` and `npm ci` have worked better w/ people in the past. Also make sure you have dependencies to compile files w/ Make. The Vue.js option is also open source and available to run. Both these options are Metamask alternatives or for those who prefer not to use geth for whatever reason. Other options could be [smart contract wallets](https://github.com/cipherzzz/erc20-megawallet) or [ganache](https://github.com/trufflesuite/ganache-ui).
+
+**Please use at your own risk, this code is open-source and as-is.**
