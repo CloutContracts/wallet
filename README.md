@@ -7,7 +7,9 @@
 That said, there are some people who prefer running wallets locally. Some tech savvy users might even implement measures to avoid frontrunning or reduce gas fees all together outside of node transfers.
 
 ## Local Wallet (Recommended)
-[Wallet 1]
+<img align="left" width="420" src="https://raw.githubusercontent.com/CloutContracts/Wallet/master/Local%20Wallet/images/Preview_image.png"> 
+This is the local wallet which is different then the Vue.js option. Please keep in mind that this wallet is sort of depreciated or based off of a legacy version of electron. However, it is open source and available to run. Many people like to run wallets locally based off of the added benefits or flexibility it may provide.
 
 ## Vue.js ERC20 Wallet (Other Option)
-[Wallet 2]
+<img align="right" width="420" src="https://raw.githubusercontent.com/CloutContracts/Wallet/master/Local%20Wallet/images/Preview_image.png"> 
+This is
