@@ -7,8 +7,10 @@
 ``` bash
 # install dependencies
 npx npm@6 install -f
+npm install webpack@4.8.0 --save-dev
 npm install
 npm audit fix --force
+npm ci
 
 # serve with hot reload at localhost:8080
 npm run dev
