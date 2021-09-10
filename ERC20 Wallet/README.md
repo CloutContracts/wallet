@@ -7,7 +7,6 @@
 ``` bash
 # install dependencies
 npm install 
-
 # or
 npm install --legacy-peer-deps -f
 
