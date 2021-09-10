@@ -6,7 +6,7 @@
 
 ``` bash
 # install dependencies
-npx npm@6 install
+npx npm@6 install -f
 npm install 
 
 # serve with hot reload at localhost:8080
