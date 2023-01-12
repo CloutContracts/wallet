@@ -30,7 +30,7 @@
     "license": "MIT",
     "devDependencies": {
         "electron": "~22.0.1",
-        "electron-builder": "^19.11.1"
+        "electron-builder": "^23.6.0"
     },
     "dependencies": {
         "clipboardy": "^1.1.4",
