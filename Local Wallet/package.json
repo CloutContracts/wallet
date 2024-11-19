@@ -33,7 +33,7 @@
         "electron-builder": "^24.13.3"
     },
     "dependencies": {
-        "clipboardy": "^1.1.4",
+        "clipboardy": "^4.0.0",
         "electron-default-menu": "^1.0.1",
         "ethers": "^6.13.4"
     }
